@@ -97,6 +97,11 @@ class WindowsAuthenticate
 
                 return $model;
             }
+            else {
+                $this->fireAuthenticatedEvent($user);
+
+                return $user;
+            }
         }
     }
 
